@@ -1,6 +1,11 @@
 # TensorFlow Signal Processing
 by Joel Shapiro
 
+# UPDATE (2018/03/31)
+I've received some questions about this paper recently that make me think people are confusing it for a functional project. I should make it clear that this is merely a paper describing problem complexity and as such makes some choices that I would not recommend to someone looking to do this kind of stuff in an actual tool. The notes at the end especially about MSE and just error in general combined with the fact that I'm not using an FFT setup really takes away from what this can do at the moment.
+
+That said, I'm currently working on something pretty cool, to try to do effect emulation in a much better way. My new TitanXP is just waiting for me to finish my RNN reading :)
+
 # Problem Overview
 
 The objective of this project is to evaluate the effectiveness of doing audio effect emulation using deep learning. For audio, there are two main classifications of tools: generators and effects. A generator is something which takes non-audio input, either physical or midi, and creates audio out of it. This would include instruments, synthesizers, drums - basically anything that really stands out as being traditionally musical. The other category, effects, are elements which take audio as input and transform it into some other audio to output. This can range from a simple filter to more complex effects such as distortion or reverb; even the echo of a room or quality drop over a phone call is an effect. The idea behind this project is to see if we can train a network to emulate one of these effects using deep learning.  
